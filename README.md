@@ -29,3 +29,34 @@ Uso de ícones grandes e intuitivos
 Navegação simples
 Áudios em todas as instruções
 Pouco ou nenhum texto complexo
+
+
+    participant U as Usuário
+    participant S as Site
+    participant IA as Sistema de Apoio (IA)
+    participant DB as Banco de Dados
+    participant A as Áudio/Leitura Guiada
+
+    U->>S: Acessa o site
+    S->>U: Mostra interface simples (ícones/voz)
+
+    U->>S: Escolhe atividade (leitura, escrita, números)
+    S->>IA: Solicita conteúdo adaptado
+
+    IA->>DB: Busca nível do usuário
+    DB-->>IA: Retorna progresso
+
+    IA-->>S: Envia conteúdo simplificado
+    S->>A: Gera áudio explicativo
+    A-->>U: Reproduz instruções por voz
+
+    U->>S: Interage (responde atividade)
+    S->>IA: Avalia resposta
+
+    IA-->>S: Feedback simples (cor, áudio, símbolos)
+    S->>U: Mostra resultado (acerto/erro)
+
+    S->>DB: Atualiza progresso do usuário
+    DB-->>S: Confirma atualização
+
+    S->>U: Sugere próxima atividade
