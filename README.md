@@ -57,3 +57,14 @@ Pouco ou nenhum texto complexo
     Usuario --> UC3
     Usuario --> UC4
  ```
+```mermaid
+stateDiagram-v2
+    [*] --> Inicio
+
+    Inicio --> Menu
+    Menu --> Atividade
+    Atividade --> Resultado
+    Resultado --> Menu
+
+    Menu --> [*]
+```
