@@ -31,32 +31,31 @@ Navegação simples
 Pouco ou nenhum texto complexo
 
 
-    participant U as Usuário
-    participant S as Site
-    participant IA as Sistema de Apoio (IA)
-    participant DB as Banco de Dados
-    participant A as Áudio/Leitura Guiada
+    ```mermaid
+    sequenceDiagram
+    Usuario->>Site: Entra no site
+    Site-->>Usuario: Mostra opcoes
 
-    U->>S: Acessa o site
-    S->>U: Mostra interface simples (ícones/voz)
+    Usuario->>Site: Escolhe atividade
+    Site->>IA: Pede conteudo
 
-    U->>S: Escolhe atividade (leitura, escrita, números)
-    S->>IA: Solicita conteúdo adaptado
+    IA-->>Site: Envia conteudo
+    Site-->>Usuario: Mostra atividade
 
-    IA->>DB: Busca nível do usuário
-    DB-->>IA: Retorna progresso
+    Usuario->>Site: Responde
+    Site-->>Usuario: Mostra resultado
+    ```
+    ```mermaid
+    flowchart TD
+    Usuario((Usuario))
 
-    IA-->>S: Envia conteúdo simplificado
-    S->>A: Gera áudio explicativo
-    A-->>U: Reproduz instruções por voz
+    UC1[Estudar leitura]
+    UC2[Ouvir explicacao]
+    UC3[Responder atividade]
+    UC4[Ver resultado]
 
-    U->>S: Interage (responde atividade)
-    S->>IA: Avalia resposta
-
-    IA-->>S: Feedback simples (cor, áudio, símbolos)
-    S->>U: Mostra resultado (acerto/erro)
-
-    S->>DB: Atualiza progresso do usuário
-    DB-->>S: Confirma atualização
-
-    S->>U: Sugere próxima atividade
+    Usuario --> UC1
+    Usuario --> UC2
+    Usuario --> UC3
+    Usuario --> UC4
+    ```
