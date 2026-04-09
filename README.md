@@ -29,9 +29,7 @@ Uso de ícones grandes e intuitivos
 Navegação simples
 Áudios em todas as instruções
 Pouco ou nenhum texto complexo
-
-
-    ```mermaid
+```mermaid
     sequenceDiagram
     Usuario->>Site: Entra no site
     Site-->>Usuario: Mostra opcoes
@@ -44,8 +42,8 @@ Pouco ou nenhum texto complexo
 
     Usuario->>Site: Responde
     Site-->>Usuario: Mostra resultado
-    ```
-    ```mermaid
+```
+```mermaid
     flowchart TD
     Usuario((Usuario))
 
@@ -58,4 +56,4 @@ Pouco ou nenhum texto complexo
     Usuario --> UC2
     Usuario --> UC3
     Usuario --> UC4
-    ```
+ ```
