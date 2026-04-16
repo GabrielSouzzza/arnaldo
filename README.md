@@ -31,6 +31,7 @@ Navegação simples
 Áudios em todas as instruções
 Pouco ou nenhum texto complexo
 
+**Diagrama de Caso de Uso**
 ```mermaid
 flowchart TD
     Usuario((Usuario))
@@ -45,6 +46,7 @@ flowchart TD
     Usuario --> UC3
     Usuario --> UC4
 ```
+**Diagrama de Sequência**
 ```mermaid
 sequenceDiagram
     Usuario->>App: Entra no app
@@ -64,6 +66,7 @@ sequenceDiagram
         App-->>Usuario: Mostra jogo
     end
 ```
+**Diagrama de Estado**
 ```mermaid
 stateDiagram-v2
     [*] --> Menu
