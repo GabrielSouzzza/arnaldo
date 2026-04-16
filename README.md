@@ -30,6 +30,21 @@ Uso de ícones grandes e intuitivos
 Navegação simples
 Áudios em todas as instruções
 Pouco ou nenhum texto complexo
+
+```mermaid
+flowchart TD
+    Usuario((Usuario))
+
+    UC1[Ver video aulas]
+    UC2[Resolver exercicios]
+    UC3[Jogar jogos educativos]
+    UC4[Ver progresso]
+
+    Usuario --> UC1
+    Usuario --> UC2
+    Usuario --> UC3
+    Usuario --> UC4
+```
 ```mermaid
 sequenceDiagram
     Usuario->>App: Entra no app
@@ -48,20 +63,6 @@ sequenceDiagram
         Usuario->>App: Inicia jogo
         App-->>Usuario: Mostra jogo
     end
-```
-```mermaid
-flowchart TD
-    Usuario((Usuario))
-
-    UC1[Ver video aulas]
-    UC2[Resolver exercicios]
-    UC3[Jogar jogos educativos]
-    UC4[Ver progresso]
-
-    Usuario --> UC1
-    Usuario --> UC2
-    Usuario --> UC3
-    Usuario --> UC4
 ```
 ```mermaid
 stateDiagram-v2
