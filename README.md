@@ -31,41 +31,50 @@ Navegação simples
 Áudios em todas as instruções
 Pouco ou nenhum texto complexo
 ```mermaid
-    sequenceDiagram
-    Usuario->>Site: Entra no site
-    Site-->>Usuario: Mostra opcoes
+sequenceDiagram
+    Usuario->>App: Entra no app
+    App-->>Usuario: Mostra menu
 
-    Usuario->>Site: Escolhe atividade
-    Site->>IA: Pede conteudo
+    Usuario->>App: Escolhe opcao
+    App-->>Usuario: Mostra conteudo
 
-    IA-->>Site: Envia conteudo
-    Site-->>Usuario: Mostra atividade
-
-    Usuario->>Site: Responde
-    Site-->>Usuario: Mostra resultado
+    alt Video aula
+        Usuario->>App: Clica em assistir
+        App-->>Usuario: Reproduz video
+    else Exercicios
+        Usuario->>App: Resolve atividade
+        App-->>Usuario: Mostra resultado
+    else Jogos
+        Usuario->>App: Inicia jogo
+        App-->>Usuario: Mostra jogo
+    end
 ```
 ```mermaid
-    flowchart TD
+flowchart TD
     Usuario((Usuario))
 
-    UC1[Estudar leitura]
-    UC2[Ouvir explicacao]
-    UC3[Responder atividade]
-    UC4[Ver resultado]
+    UC1[Ver video aulas]
+    UC2[Resolver exercicios]
+    UC3[Jogar jogos educativos]
+    UC4[Ver progresso]
 
     Usuario --> UC1
     Usuario --> UC2
     Usuario --> UC3
     Usuario --> UC4
- ```
+```
 ```mermaid
 stateDiagram-v2
-    [*] --> Inicio
+    [*] --> Menu
 
-    Inicio --> Menu
-    Menu --> Atividade
-    Atividade --> Resultado
+    Menu --> Video
+    Menu --> Exercicios
+    Menu --> Jogos
+
+    Video --> Menu
+    Exercicios --> Resultado
     Resultado --> Menu
+    Jogos --> Menu
 
     Menu --> [*]
 ```
