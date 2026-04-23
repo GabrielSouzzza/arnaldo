@@ -80,5 +80,5 @@ stateDiagram-v2
     Resultado --> Menu
     Jogos --> Menu
 
-    Menu --> [*]
+   
 ```
